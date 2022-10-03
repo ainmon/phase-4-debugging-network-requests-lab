@@ -63,11 +63,17 @@ developing your own process.
 - Add a new toy when the toy form is submitted
 
   - How I debugged:
+  - on creation attempt, checked the rails log and immediately noticed the type of Toys in the create method
 
 - Update the number of likes for a toy
 
   - How I debugged:
+    - checked error message stating unexpected input at end of json; previous knowledge lead me to check the controller to see what was going on in the update portion
+    - since liking something would be an update, that was why i checked there first
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+    - checked Network tab on browser, noticed there was a 404 with nothing being returned
+    - initially checked the controller methods and didn't see any issue with the destroy method
+    - my next step was to see the resource and check which methods were setup, i noticed destroy was not within the list
